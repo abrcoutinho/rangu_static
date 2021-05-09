@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400;500;700&display=swap");
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, a, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, nav, section, menu, time, mark, audio, video, canvas { margin: 0; padding: 0; border: 0; }
+
+html, body { min-height: 100%; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; }
+
+body, input, textarea, button { font: 100% "Red Hat Text", sans-serif; color: #373737; -webkit-font-smoothing: antialiased; outline: none; }
+
+a { text-decoration: none; }
+
+ul, ol, dl { list-style: none; }
+
+button { padding: 0; border: 0; background-color: transparent; cursor: pointer; }
+
+em { font-style: normal; }
+
+strong, h1, h2, h3, h4, h5, h6 { font-weight: 700; }
+
+::selection { background: #b33f4c; color: white; }
+
+::-webkit-scrollbar { width: 0; }
+
+::-webkit-scrollbar-track { background-color: #373737; }
+
+::-webkit-scrollbar-thumb { background-color: #b33f4c; }
+
+::-webkit-scrollbar-thumb:hover { background-color: #cd717c; }
+
+.kitchen_product_list_item article:after { height: 0; clear: both; content: "."; display: block; font-size: 0; visibility: hidden; position: initial; }
+
+.home { position: relative; background-color: #ffd87e; min-height: 100vh; box-sizing: border-box; overflow-x: hidden; }
+
+.home > h1 { display: none; }
+
+.home .search { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+
+.kitchens_navigation { width: 99.7vw; background-color: #f6f6f6; display: flex; box-sizing: border-box; }
+
+.kitchens_navigation > h1 { display: none; }
+
+.results_kitchens { flex: 0 0 61.5%; overflow: overlay; height: 100vh; }
+
+.results_kitchens > header { padding: 50px 6vw 0; background-color: white; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15); position: relative; }
+
+.results_kitchens > header::after { content: ''; width: 50%; height: 100%; position: absolute; top: 0; right: 0; background: url("../img/coxa.svg") no-repeat left center; background-size: auto 105%; opacity: 15%; }
+
+.results_kitchens > header h2 { padding: 40px 25px; width: 75%; font: 5vw "Titillium Web", sans-serif; text-transform: uppercase; line-height: 1; position: relative; z-index: 1; }
+
+.results_kitchens > header .location { padding: 0 25px 15px; position: relative; z-index: 1; }
+
+.results_kitchens > header .location button { font-weight: 500; height: 33px; line-height: 33px; position: relative; }
+
+.results_kitchens > header .location button:first-of-type { padding-right: 25px; border-right: solid 1px #a0a0a0; }
+
+.results_kitchens > header .location button:nth-of-type(2) { margin-left: 20px; padding-left: 25px; background: url("../img/pin.svg") no-repeat 0 center; background-size: auto 50%; }
+
+.call_search_filters { position: absolute; bottom: -103px; left: 0; overflow: hidden; text-indent: -999px; width: 50px; height: 50px; background: url("../img/filter.svg") no-repeat center center; background-size: 20px auto; }
+
+.kitchens_group { padding: 60px 6vw; box-sizing: border-box; display: flex; flex-flow: row wrap; justify-content: space-between; }
+
+.kitchens_group dt { flex: 1 100%; margin-bottom: 15px; }
+
+.kitchens_group dt h3 { padding: 0 25px; font-size: 1.6em; }
+
+.kitchens_group dt button { float: right; text-align: right; font-size: 0.8em; padding: 5px 20px 5px 5px; background: url("../img/arrow-right.svg") no-repeat right center; background-size: auto 10px; margin-right: 25px; }
+
+.kitchens_group dd { width: 33%; margin-bottom: 3px; }
+
+.kitchens_group dd a { display: block; }
+
+.kitchen_card { background-color: white; box-sizing: border-box; }
+
+.kitchen_card h4 { padding: 15% 10% 8%; color: #b33f4c; }
+
+.kitchen_card > div { padding: 0 10%; }
+
+.kitchen_card > div:nth-of-type(2) { color: #6a6a6a; font-size: 0.8em; font-weight: 500; display: flex; justify-content: space-between; margin: 5px 0 15px; }
+
+.kitchen_card dfn { color: #aeaeae; font-style: normal; }
+
+.kitchen_card address { display: inline-block; font-style: normal; }
+
+.kitchen_card span { text-align: right; display: inline-block; }
+
+.kitchen_card figure { width: 100%; overflow: hidden; background: grey; height: 10vw; position: relative; }
+
+.kitchen_card img { position: absolute; top: 0; left: 0; width: 101%; }
+
+.kitchen_card .rating { padding-left: 18px; background: url("../img/rating-star.svg") no-repeat 0 1px; background-size: 12px auto; }
+
+.header_general { width: 100%; height: 50px; position: fixed; top: 0; left: 0; display: flex; justify-content: space-between; z-index: 10; }
+
+.header_general > div button { width: 80px; height: 100%; background-color: #b33f4c; display: inline-block; vertical-align: middle; }
+
+.header_general > div img { display: inline-block; vertical-align: middle; margin-left: 20px; }
+
+.header_general > a { padding: 0 25px; height: 100%; background-color: #b33f4c; color: white; font: 1.2em "Titillium Web", sans-serif; text-transform: uppercase; line-height: 50px; }
+
+.window_search_filters { width: 360px; position: fixed; left: -400px; top: 0; background-color: white; height: 100vh; z-index: 20; box-shadow: 5px 0 10px rgba(0, 0, 0, 0.2); transition: 0.4s cubic-bezier(0.5, 0, 0, 1); }
+
+.window_search_filters.is-active { left: 0; }
+
+.kitchen_page { flex: 0 0 38.5%; background-color: white; box-sizing: border-box; border-left: solid 2px #f6f6f6; overflow: overlay; height: 100vh; }
+
+.kitchen_page > header { padding: 60px 0 40px; }
+
+.kitchen_page > header h3 { color: #b33f4c; font: 1.5em "Titillium Web", sans-serif; padding: 0 10% 5px; }
+
+.kitchen_page > header > div { padding: 0 10% 25px; }
+
+.kitchen_page > header > div * { display: inline-block; font-style: normal; font-size: 0.8rem; }
+
+.kitchen_page > header address { margin-right: 25px; position: relative; }
+
+.kitchen_page > header address::after { content: '|'; position: absolute; right: -15px; top: 0; }
+
+.kitchen_page > header .categories { margin-right: 25px; position: relative; }
+
+.kitchen_page > header .categories::after { content: '|'; position: absolute; right: -15px; top: 0; }
+
+.kitchen_page > header .categories dfn { margin-right: 3px; }
+
+.kitchen_page > header .rating { padding-left: 18px; background: url("../img/rating-star.svg") no-repeat 0 1px; background-size: 12px auto; }
+
+.kitchen_page > header ul { display: flex; align-items: center; overflow: hidden; }
+
+.kitchen_page > header li { background-color: #f5f5f5; background-repeat: no-repeat; font-size: 0.7rem; font-weight: 500; position: relative; margin-left: 2px; }
+
+.kitchen_page > header li:first-child button { padding-left: 30px; background: url("../img/cardapio.svg") no-repeat 10px center; background-size: 11px auto; }
+
+.kitchen_page > header li:nth-child(2) { text-transform: uppercase; padding: 6px 12px 6px 40px; background-image: url("../img/delivery.svg"); background-position: 10px center; background-size: 20px auto; }
+
+.kitchen_page > header li:last-child::after { content: ''; width: 1000px; height: 100%; background-color: inherit; position: absolute; top: 0; right: -1002px; }
+
+.kitchen_page > header li time { padding: 6px 12px 6px 30px; display: block; background: url("../img/time.svg") no-repeat 10px center; background-size: 11px auto; }
+
+.kitchen_page > header li button { padding: 6px 12px; box-sizing: border-box; box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.2); text-transform: uppercase; font-weight: 500; display: block; height: 100%; }
+
+.kitchen_product_list { padding: 0 10%; }
+
+.kitchen_product_list h4 { font-size: 1.2rem; font-weight: 700; margin-bottom: 20px; }
+
+.kitchen_product_list_item { margin-bottom: 44px; }
+
+.kitchen_product_list_item figure { width: 90px; height: 90px; margin-right: 20px; overflow: hidden; position: relative; float: left; border-radius: 4px; }
+
+.kitchen_product_list_item figure img { position: absolute; top: 0; left: 0; width: auto; height: 101%; }
+
+.kitchen_product_list_item h5 { font-size: 1rem; margin-bottom: 5px; }
+
+.kitchen_product_list_item p { font-size: 0.9rem; margin-bottom: 10px; }
+
+.kitchen_product_list_item strong { font-weight: 500; color: #82ecad; }
+
+.kitchen_product_list_item strong em { color: #373737; }
+
+/*# sourceMappingURL=general.css.map */
