@@ -1,0 +1,134 @@
+
+// fonts
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@900&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400;500;700&display=swap')
+
+$font--alternative:   'Titillium Web', sans-serif
+$font--primary:       'Red Hat Text', sans-serif
+$font--reg:           400
+$font--medium:        500
+$font--bold:          700
+
+// colors
+$color--dark:    #373737
+$color--brand:   #b33f4c
+$color--light:   #c7e8dc
+$color--beige:   #ffd87e
+$color--money:   #82ecad
+
+// $cursor: url('../img/cursor.svg'), auto
+$ease: cubic-bezier(.5,0,0,1)
+$default-margin: 8%
+
+// resets
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, a, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, nav, section, menu, time, mark, audio, video, canvas
+  margin:     0
+  padding:    0
+  border:     0
+
+html, body
+  min-height:               100%
+  -ms-text-size-adjust:     100%
+  -webkit-text-size-adjust: 100%
+
+body, input, textarea, button
+  font:                     100% $font--primary
+  color:                    $color--dark
+  -webkit-font-smoothing:   antialiased
+  outline:                  none
+  // cursor: $cursor
+
+a
+  text-decoration:   none
+  // cursor:            $cursor
+ul, ol, dl
+  list-style:        none
+button
+  padding:           0
+  border:            0
+  background-color:  transparent
+  cursor:            pointer
+em
+  font-style:        normal
+strong, h1, h2, h3, h4, h5, h6
+  font-weight:       700
+
+
+// selection
+::selection
+  background:       $color--brand
+  color:            white
+
+
+// placeholder
+@mixin placeholder($color)
+  &::-webkit-input-placeholder
+    color: #{$color}
+  &:-ms-input-placeholder
+    color: #{$color}
+  &::placeholder
+    color: #{$color}
+
+
+// scrollbars webkit
+::-webkit-scrollbar
+  width: 0
+::-webkit-scrollbar-track
+  background-color: $color--dark
+::-webkit-scrollbar-thumb
+  background-color: $color--brand
+::-webkit-scrollbar-thumb:hover
+  background-color: lighten($color--brand, 15%)
+
+
+%clear
+  &:after
+    height:             0
+    clear:              both
+    content:            "."
+    display:            block
+    font-size:          0
+    visibility:         hidden
+    position:           initial
+
+
+
+
+// Animate on scroll
+// .slide-in
+//   opacity: 0
+
+// .align-left
+//   transform: translate(-30%, 0)
+// .align-right
+//   transform: translate(30%, 0)
+// .align-up
+//   transform: translate(0, 50px)
+// .fade
+//   opacity: 0.3
+//   transform: translate(0, 30px)
+
+// .slide-actived
+//   opacity: 1
+//   transform: translate(0, 0)
+//   transition: all 1s $ease .4s
+
+
+
+// Media queries
+@mixin for-size($size)
+  @if $size == phone-only
+    @media (max-width: 599px)
+      @content
+  @else if $size == tablet-portrait-up
+    @media (min-width: 600px) and (orientation: portrait) and (max-width: 1199px)
+      @content
+  @else if $size == tablet-landscape-up
+    @media (min-width: 900px) and (orientation: landscape) and (max-width: 1199px)
+      @content
+  @else if $size == desktop-up
+    @media (min-width: 1200px)
+      @content
+  @else if $size == big-desktop-up
+    @media (min-width: 1800px)
+      @content

@@ -1,0 +1,35 @@
+---
+layout: default
+title: Rangu - Cozinhas perto de Av. Paulista 53
+---
+
+<div class="kitchens_navigation" id="kitchens_navigation">
+
+	<h1>{{ page.title }}</h1>
+	{% include header_general.html %}
+
+	<section class="results_kitchens">
+		<header>
+			<h2>152 talentos culinários na sua região</h2>
+
+			<div class="location">
+				<button type="button">Entregar agora</button>
+				<button type="button">Av. Paulista 53</button>	
+			</div>
+
+			<button type="button" class="call_search_filters">Filtrar</button>
+		</header>
+
+		<dl class="kitchens_group">
+			<dt>
+				<h3>Cozinhas próximas</h3>
+				<button>Mais relevantes</button>
+			</dt>
+			{% include kitchen_card.html %}
+		</dl>
+	</section>
+
+	{% include kitchen_page.html %}
+
+	{% include window_search_filters.html %}
+</div>

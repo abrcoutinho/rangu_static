@@ -1,0 +1,22 @@
+{% for post in site.posts %}
+	<dd>
+		<a href="{{ post.url }}" title="{{ post.title }}">
+			<article class="kitchen_card">
+				<h4>{{ post.title }}</h4>
+
+				<div>
+					<dfn>#{{ post.category }}</dfn>
+				</div>
+
+				<div>
+					<address>~{{ post.distance }}km</address>
+					<span class="rating">{{ post.rating }}</span>
+				</div>
+
+				<figure>
+					<img src="img/products/{{ post.thumb }}.jpg" alt="{{ post.title }}" />
+				</figure>
+			</article>
+		</a>
+	</dd>
+{% endfor %}
